@@ -15,4 +15,6 @@
 * `	⌘ + l` Jump to the Address Bar
 
 # Will Learn
--
+
+
+* https://support.google.com/chrome/answer/157179?hl=en
