@@ -53,3 +53,40 @@ Here is vimrc mapping for it.
     nmap <silent> <RIGHT><RIGHT>  :cnf<CR><C-G>
     nmap <silent> <LEFT>          :cprev<CR>
     nmap <silent> <LEFT><LEFT>    :cpf<CR><C-G>
+
+
+Seems like helpgrep is special version of `VIMGREP`command which more general way
+of searching something.
+
+* `ZZ` quit from buffer with saving changes
+* `wq` is another way to quitting buffer with saving changes.
+
+
+## Full Pane Help Page
+
+While looking for help inside vim, vim splits the screen so that you can also see
+current buffer below help page. This is sometimes distracting so here is vimrc to
+remove that pane and open help page in new tab.
+
+    "=====[ Show help files in a new tab, plus add a shortcut for helpg ]==============
+
+    "Only apply to .txt files...
+    augroup HelpInTabs
+        autocmd!
+        autocmd BufEnter  *.txt   call HelpInNewTab()
+    augroup END
+
+    "Only apply to help files...
+    function! HelpInNewTab ()
+        if &buftype == 'help'
+            "Convert the help window to a tab...
+            execute "normal \<C-W>T"
+        endif
+    endfunction
+
+
+## Extra
+
+* `vimgrep /PATTERN/ files...`
+
+Look for pattern in every file in the list and take me to each of them.
