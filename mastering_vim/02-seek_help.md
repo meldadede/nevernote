@@ -34,19 +34,19 @@ Probably a lot so we need a way to browse them really easily.
 
 ## Browsing helpgrep result
 
-* `:cnext` show me the next match
-* `:cprev` show me the previous match
+* `:cnext` show me the next match in file
+* `:cprev` show me the previous match in file
 * `:cnfile` show me the next help file matching
 * `:cpfile` show me the previous help file matching
 
-> You dont have to do that but there is a function that maps arrow keys to
-browsing helpgrep results. It maps follwing
+> You dont have to do that but there is a configuration that maps arrow keys for
+browsing helpgrep results. Here it is
   * -> : cnext
   * -> -> : cnfile
   * <- : cprev
   * <-<- : cpfile
 
-Here is how to do it inside vimrc.
+Here is vimrc mapping for it.
 
     " Make it easy to navigate errors (and vimgreps)...
     nmap <silent> <RIGHT>         :cnext<CR>
