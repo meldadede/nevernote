@@ -1,6 +1,6 @@
 # Learn to move
 
-Best way to feel like learning vim is know how to move around the buffer.
+Best way to feel like learning vim is knowing how to move around the buffer.
 Generally there are more than one way to do that.
 
 * h j k l keys
@@ -9,7 +9,8 @@ Generally there are more than one way to do that.
 * text objects
 
 `Ctrl + G` shows where i am currently in file with ruler at bottom
-Asking everytime to show where in file is boring so there is confg. for it.
+Asking every time to show where I am in the file is boring so there is confgiuration
+option for it in your `vimrc`
 
     set ruler "always show the ruler
 
@@ -28,8 +29,34 @@ better methods for alternatives.
 There is also uppercase version of these commands that move by word (which actually
 will humans think what word is)
 
+Motions for moving between and within lines.
+
 `0` start of the line
 `^` first word of the current line
 `$` end of the line
 `CR`next line
 `-` start of prev. line
+
+
+Moving by paragraph
+
+`}` move to next paragraph
+`{` move to previous paragraph
+
+Moving start and end of file
+
+`G` move to end of the file
+`gg` move to start of the file
+`<NUMBER>G` move to line given by NUMBER
+
+
+## Matching Parenthesis
+
+Vim allows you to move between matching pairs.
+Default setting allows you to move between `{}`, `[]`, `()`
+
+Adding your own matching pairs
+
+    set matchpairs += <:>, <<:>>
+
+    
