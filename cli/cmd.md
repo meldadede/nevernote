@@ -142,3 +142,12 @@ copy files or directories
 * `cp item1 item2 item3 dir1` copy all items to dir1
 * `cp dir1/* dir2` copy dir1 content to dir2, dir2 must exist
 * `cp -R dir1 dir2` copy dir1 and its content to dir2, dir2 will be created
+
+# mv
+
+move or rename files
+
+* `mv item1 item2` move item1 as item2 (rename)
+* `mv item1 item2 item3 dir1` move item123 to dir1
+* `mv -i item1 item2` interactive move if item2 exist as for confirmation
+* `mv dir1 dir2` move dir1 and its content to dir2 and delete dir1. create dir2 if not exist
