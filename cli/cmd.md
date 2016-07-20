@@ -151,3 +151,11 @@ move or rename files
 * `mv item1 item2 item3 dir1` move item123 to dir1
 * `mv -i item1 item2` interactive move if item2 exist as for confirmation
 * `mv dir1 dir2` move dir1 and its content to dir2 and delete dir1. create dir2 if not exist
+
+# rm
+
+remove files and folders
+
+* `rm file` removes files from system
+* `rm -i file` remove but ask confirmation
+* `rm -r file dir1` delete file and content of dir1
