@@ -100,3 +100,45 @@ View content of the most text files.
 * `/characters` search for characters
 
 > Designed after `more` which allows forward but not backward browse.
+
+# wildcards for matching
+
+special characters makes matching specific group easier.
+
+* `*` any characters
+* `?` any single character
+* `[characters]` any character that is member of characters group
+* `[!characters]` any character that is not member of char group
+* `[[:class:]]` any characters that is member of given class
+* `[:alnum:]` any alphanumeric character
+* `[:alpha:]` any alphabetic character
+* `[:digit:]` any digit character
+* `[:upper:]` any uppercase character
+* `[:lower:]` any lowercase character
+
+    *         all file
+    g*        all file start with g
+    b*.txt    all file start with b followed by any char ending with .txt
+    Data???   any file start with Data followed by exactly 3 character
+    [abc]*    any file start with a,b or c
+    [![:digit:]]* any file not starting with digit
+    \*[[:lower:]123] file ending with lowercase letter or 1, 2 or 3
+
+
+# mkdir
+
+create new directory with given name
+
+* `mkdir` dir1 dir2 dir3
+* `mkdir` dirx
+
+# cp
+
+copy files or directories
+
+* `cp item1 item2` copy item1 to item2
+* `cp -i item1 item2` will ask for confirmation if item2 exist
+* `cp -a item1 item2` copy item1 with its attributes
+* `cp item1 item2 item3 dir1` copy all items to dir1
+* `cp dir1/* dir2` copy dir1 content to dir2, dir2 must exist
+* `cp -R dir1 dir2` copy dir1 and its content to dir2, dir2 will be created
